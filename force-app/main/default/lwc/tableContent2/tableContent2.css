@@ -1,0 +1,12 @@
+.button-hoverable:hover{
+    background-color: rgb(192, 57, 57);
+}
+
+.button-blue{
+    background-color:rgb(96, 96, 194);
+    color:white;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,25 @@
+<template>
+    <td>
+        <div class="slds-truncate" title="First Name">{contact.FirstName}</div>
+    </td>
+    <td>
+        <div class="slds-truncate" title="Last Name">{contact.LastName}</div>
+   </td>
+   <td>
+        <div class="slds-truncate" title="Email">{contact.Email}</div>
+    </td>
+    <td>
+        <template if:true={contact.Account}>
+            <a account-id = {contact.AccountId} onclick={handleRedirectToAccountPage}>{contact.Account.Name}</a>
+        </template>
+    </td>
+    <td>
+        <div class="slds-truncate" title="Mobile Phone">{contact.MobilePhone}</div>
+    </td>
+    <td>
+        <lightning-formatted-date-time value={contact.CreatedDate} year="numeric" month="2-digit" day="2-digit" hour="2-digit" minute="2-digit" second="2-digit" hour12="true"></lightning-formatted-date-time>
+    </td>
+    <td>
+        <button onclick={deleteButtonHandler} class = 'slds-button button-hoverable button-blue'>Delete</button>
+    </td>
+</template>
